@@ -1,8 +1,7 @@
 pipeline {
   environment {
-    registry = 'dineshmasilamani5/transporter_test'
-    registryCredential = 'Smileplease@1'
-    dockerImage = ''
+    registry = 'https://hub.docker.com'
+    registryCredential = 'dineshmasilamani5/transporter_test'
   }
   agent any
   stages {
@@ -21,7 +20,7 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-          docker.withRegistry('registry' , 'registryCredential' ) {
+          docker.withRegistry('https://hub.docker.com','dineshmasilamani5/transporter_test') {
             dockerImage.push()
           }
         }
