@@ -1,7 +1,7 @@
 pipeline {
   environment {
-    registry = 'https://hub.docker.com'
-    registryCredential = 'dineshmasilamani5/transporter_test'
+    registry = 'dineshmasilamani5/transporter_test'
+    registryCredential = 'Smileplease@1'
   }
   agent any
   stages {
