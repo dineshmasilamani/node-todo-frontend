@@ -8,7 +8,7 @@ node {
     def registryCredential = 'Smileplease@1'
 	
 	stage('Git') {
-		git 'https://github.com/gustavoapolinario/microservices-node-example-todo-frontend.git'
+		git 'https://github.com/dineshmasilamani/node-todo-frontend.git'
 	}
 	stage('Build') {
 		sh 'npm install'
